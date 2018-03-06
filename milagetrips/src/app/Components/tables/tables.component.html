@@ -1,0 +1,38 @@
+<table style="border: 1px solid black; width:100%">
+
+
+
+
+  <tr style = "border: 1px solid black;">
+    <th>PropertyId</th>
+    <th>PropertyName</th> 
+    <th>SPGCategoryCode</th>
+    <th>PropertyCity</th>
+    <th>PropertyState</th> 
+    <th>StateCode</th>
+    <th>BrandCode</th>
+    <th>CountryCode</th> 
+    <th>PropertyStatus</th>
+  </tr>
+ 
+      <tr *ngFor="let hotel of allHotels">
+          <td>{{hotel.PropertyId}}</td>
+          <td>{{hotel.PropertyName}}</td>
+          <td>{{hotel.SPGCategoryCode}}</td>
+          <td>{{hotel.PropertyCity}}</td>
+          <td>{{hotel.PropertyState}}</td>
+          <td>{{hotel.StateCode}}</td>
+          <td>{{hotel.BrandCode}}</td>
+          <td>{{hotel.CountryCode}}</td>
+          <td>{{hotel.PropertyStatus}}</td>
+        </tr>
+
+</table>
+
+<button (click)="getAllHotels()">Get List of Hotels</button>
+
+<div *ngFor = "let post of posts | async">
+
+{{post | json }}
+
+</div>
